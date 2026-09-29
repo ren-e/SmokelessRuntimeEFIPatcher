@@ -1,19 +1,18 @@
 [Defines]
 	INF_VERSION                    = 0x00010006
 	BASE_NAME                      = SmokelessRuntimeEFIPatcher
-	FILE_GUID                      =  24ba59e6-8d34-4fe4-83a0-da8e478ecbfe
+	FILE_GUID                      = 24ba59e6-8d34-4fe4-83a0-da8e478ecbfe
 	MODULE_TYPE                    = UEFI_APPLICATION
 	VERSION_STRING                 = 0.1
 	ENTRY_POINT                    = SREPEntry
+	UEFI_HII_RESOURCE_SECTION      = TRUE
 
-
-  UEFI_HII_RESOURCE_SECTION      = TRUE
 [Sources]
-	SmokelessRuntimeEFIPatcher.c
+  SmokelessRuntimeEFIPatcher.c
   Utility.c
   OpCode.c
 [Packages]
-	MdePkg/MdePkg.dec
+  MdePkg/MdePkg.dec
   MdeModulePkg/MdeModulePkg.dec
   CryptoPkg/CryptoPkg.dec
 [LibraryClasses]

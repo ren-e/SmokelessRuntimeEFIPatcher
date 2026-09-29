@@ -1,3 +1,4 @@
+
 [Defines]
   PLATFORM_NAME                  = SmokelessRuntimeEFIPatcherPkg
   PLATFORM_GUID                  = 435762d8-e678-46f0-a3d2-5c041a3a1368
@@ -9,6 +10,7 @@
   SKUID_IDENTIFIER               = DEFAULT
 
 [LibraryClasses]
+  !include MdePkg/MdeLibs.dsc.inc
   BaseLib|MdePkg/Library/BaseLib/BaseLib.inf
   UefiDriverEntryPoint|MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint.inf
   UefiApplicationEntryPoint|MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint.inf
@@ -30,5 +32,6 @@
   IntrinsicLib|CryptoPkg/Library/IntrinsicLib/IntrinsicLib.inf
   RngLib|MdePkg/Library/BaseRngLib/BaseRngLib.inf
   HandleParsingLib|ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib.inf
+  TimerLib|MdePkg/Library/BaseTimerLibNullTemplate/BaseTimerLibNullTemplate.inf
 [Components]
-  SmokelessRuntimeEFIPatcher/SmokelessRuntimeEFIPatcher/SmokelessRuntimeEFIPatcher.inf
+  SmokelessRuntimeEFIPatcher/SmokelessRuntimeEFIPatcher.inf
