@@ -1,0 +1,26 @@
+[Defines]
+  INF_VERSION                    = 0x0001001B
+  BASE_NAME                      = Setup
+  FILE_GUID                      = 8D4723A7-9D21-4ED6-96B6-7D55AC81B501
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = setup
+
+[Sources]
+  Setup.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  HiiLib
+
+[Protocols]
+  gEfiFormBrowser2ProtocolGuid
+
+[Guids]
+  gEfiHiiPlatformSetupFormsetGuid
